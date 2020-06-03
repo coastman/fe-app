@@ -23,6 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
+    './styles/_normalize.css'
     // './styles/variables.scss'
   ],
   /*
