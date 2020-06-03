@@ -1,9 +1,21 @@
 <template>
   <div id="app">
-    <Header />
-    <nuxt />
+    <Main />
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import Main from '@/components/layout/Main.vue'
+
+@Component({
+  components: {
+    Main
+  }
+})
+export default class extends Vue {
+}
+</script>
 
 <style>
 html {
