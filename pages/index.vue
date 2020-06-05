@@ -3,14 +3,14 @@
     <div>
       <logo />
       <h1 class="title">
-        fe-app
+        {{ name }}
       </h1>
       <h2 class="subtitle">
         My amazing Nuxt.js project
       </h2>
-      <button @click="setName">
+      <!-- <button @click="setName">
         ddsds
-      </button>
+      </button> -->
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -22,7 +22,7 @@
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey">
-          {{ name - 1 }}
+          <!-- {{ name - 1 }} -->
           GitHub
         </a>
       </div>
@@ -40,8 +40,11 @@ import Logo from '@/components/Logo.vue'
   }
 })
 
-export default class App extends Vue {
-  name: string = '1'
+export default class extends Vue {
+  private name: string = 'I am a fish'
+  private subtitle: string = 'My amazing Nuxt.js project'
+  private docs: string = 'Documentation'
+  private github: string = 'GitHub'
 
   public setName () {
     this.name = '2'
@@ -49,7 +52,7 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .container {
   margin: 0 auto;
