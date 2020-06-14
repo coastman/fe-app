@@ -1,42 +1,24 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        {{ name }}
-      </h1>
-      <h2 class="subtitle">
-        My amazing Nuxt.js project
-      </h2>
-      <!-- <button @click="setName">
-        ddsds
-      </button> -->
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">
-          <!-- {{ name - 1 }} -->
-          GitHub
-        </a>
-      </div>
-    </div>
+    <p v-for="(item, index) in list" :key="index">
+      {{ item.content }}
+    </p>
+    {{ name }}
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { Resp, Context } from '@/types'
 import Logo from '@/components/Logo.vue'
 
 @Component({
   components: {
     Logo
+  },
+  async asyncData({ app }: Context): Promise<object> {
+    const { result }: Resp = await app.$api.article.findAll()
+    return { list: result.list }
   }
 })
 
@@ -45,16 +27,13 @@ export default class extends Vue {
   private subtitle: string = 'My amazing Nuxt.js project'
   private docs: string = 'Documentation'
   private github: string = 'GitHub'
-
-  public setName () {
-    this.name = '2'
-  }
 }
 </script>
 
 <style lang="scss" scoped>
 
 .container {
+  width: 608px;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;

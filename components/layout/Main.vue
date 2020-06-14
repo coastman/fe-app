@@ -5,7 +5,9 @@
 
     <!-- 主体内容 -->
     <main class="main-container">
+      <LeftMenu />
       <nuxt />
+      <RightBar />
     </main>
 
     <!-- 底部 footer -->
@@ -17,21 +19,16 @@
 import { Component, Vue } from 'vue-property-decorator'
 import Header from './Header.vue'
 import Footer from './Footer.vue'
+import LeftMenu from './LeftMenu.vue'
+import RightBar from './RightBar.vue'
 
 @Component({
   name: 'Main',
-  components: {
-    Header,
-    Footer
-  }
+  components: { Header, Footer, LeftMenu, RightBar }
 })
 
 export default class extends Vue {
   name: string = '1'
-
-  public setName () {
-    this.name = '2'
-  }
 }
 </script>
 
@@ -40,9 +37,13 @@ export default class extends Vue {
   padding-top: 72px;
 
   .main-container {
-    width: 1050px;
+    width: 1064px;
     margin: 0 auto;
-    background-color: coral;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    // background-color: coral;
   }
 }
 </style>

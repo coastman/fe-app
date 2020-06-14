@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header-container">
       <h2 class="title">
-        {{ title }}
+        <!-- {{ title }} -->
       </h2>
     </div>
   </header>
@@ -33,7 +33,7 @@ export default class extends Vue {
     width: 1050px;
     height: 100%;
     margin: 0 auto;
-    background-color: burlywood;
+    // background-color: burlywood;
     text-align: center;
 
     .title {
