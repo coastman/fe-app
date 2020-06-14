@@ -30,6 +30,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    './plugins/api.ts'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -50,6 +51,16 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: 'http://127.0.0.1:8888',
+    browserBaseURL: '/dev',
+    proxy: true
+  },
+  proxy: {
+    '/dev': {
+      target: 'http://127.0.0.1:8888/',
+      changeOrigin: true,
+      pathRewrite: { '^/dev': '' }
+    }
   },
   /*
   ** Build configuration
@@ -58,7 +69,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   },
   // 全局使用scss变量，mixins
