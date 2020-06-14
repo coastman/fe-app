@@ -15,6 +15,7 @@ module.exports = {
       "singleline": "never",
       "multiline": "never"
     }],
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "space-before-function-paren": ["error", "never"]
   }
 }
