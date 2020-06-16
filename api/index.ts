@@ -23,7 +23,7 @@ export default (axios: AxiosInstance) => {
 
   const api: APIs = {}
   Object.keys(API).forEach((key: string) => {
-    api[key] = new (API as any)[key](axios)
+    api[key] = new (API as {[key: string ]: any})[key](axios)
   })
 
   return api

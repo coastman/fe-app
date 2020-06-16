@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { Resp, Context } from '@/types'
+import { Context } from '@/types'
 import Logo from '@/components/Logo.vue'
 
 @Component({
@@ -17,7 +17,7 @@ import Logo from '@/components/Logo.vue'
     Logo
   },
   async asyncData({ app }: Context): Promise<object> {
-    const { result }: Resp = await app.$api.article.findAll()
+    const { result }: Http.Resp = await app.$api.article.findAll()
     return { list: result.list }
   }
 })
