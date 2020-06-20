@@ -14,7 +14,7 @@
   npm run dev    # 开发环境运行
   npm run build  # 打包
   npm start      # 生产环境运行
-  npm run lint   # eslint 校验
+  npm run lint   # Eslint 校验
 ```
 
 ## 常用规范
@@ -44,3 +44,42 @@ type 类型:
 * [Nuxt TypeScript](https://typescript.nuxtjs.org/guide/)
 
 * [Git Commit 规范](https://segmentfault.com/a/1190000009048911)
+
+## 目录结构
+```
+fe-app/
+   |
+   ├──api/                       * 后端服务 API
+   │
+   ├──assets/                    * 需经 webpack 处理的静态资源
+   |
+   ├──components/                * 所有组件
+   │
+   │──layouts/                   * Nuxt 布局容器组件
+   │
+   │──middleware/                * Nuxt 中间件
+   │
+   ├──pages/                     * Nuxt 页面文件, 根据文件生成路由
+   │
+   │──plugins/                   * 第三方插件
+   │
+   │──static/                    * 不需经 webpack 处理的静态资源
+   │
+   │──store/                     * 全局数据状态管理
+   │
+   │──.editorconfig              * 编码风格配置
+   │
+   │──.eslintrc.js               * Eslint 配置
+   │
+   │──.gitignore                 * Git 忽略文件配置
+   │
+   │──CHANGELOG.md               * 版本更新记录
+   │
+   │──nuxt.config.js             * Nuxt 程序配置, 包含 ( webpack 配置)
+   │
+   │──package.json               * 依赖信息
+   │
+   │──README.md                  * 项目信息
+   │
+   └──tsconfig.json              * TS 配置
+```
