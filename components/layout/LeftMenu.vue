@@ -9,8 +9,7 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component({ name: 'LeftMenu' })
 
-export default class extends Vue {
-}
+export default class extends Vue {}
 </script>
 
 <style lang="scss" scoped>
@@ -18,6 +17,5 @@ export default class extends Vue {
     width: 164px;
     height: 600px;
     float: left;
-    // background-color: brown;
   }
 </style>

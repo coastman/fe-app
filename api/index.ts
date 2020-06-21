@@ -1,6 +1,9 @@
 
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import API, { APIs } from './service'
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from '@/types'
+
+// ===== axios 拦截器
+// 参考 https://www.kancloud.cn/yunye/axios/234845
 
 export default (axios: AxiosInstance) => {
   axios.interceptors.request.use(

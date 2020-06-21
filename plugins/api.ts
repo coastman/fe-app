@@ -1,4 +1,7 @@
-import { Plugin } from '@nuxt/types'
+// 扩展 axios 插件
+// https://typescript.nuxtjs.org/cookbook/plugins.html
+
+import { Plugin } from '@/types'
 import getAPI from '@/api'
 
 declare module 'vue/types/vue' {

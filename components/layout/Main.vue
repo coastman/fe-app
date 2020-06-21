@@ -27,9 +27,7 @@ import RightBar from './RightBar.vue'
   components: { Header, Footer, LeftMenu, RightBar }
 })
 
-export default class extends Vue {
-  name: string = '1'
-}
+export default class extends Vue {}
 </script>
 
 <style lang="scss" scoped>
@@ -42,8 +40,6 @@ export default class extends Vue {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    // background-color: coral;
   }
 }
 </style>

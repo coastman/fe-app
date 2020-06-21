@@ -15,10 +15,13 @@
     "@nuxt/typescript-runtime": "^0.4.0",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/style-resources": "^1.0.0",
+    "@types/marked": "^0.7.4",
+    "marked": "^1.1.0",
     "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2",
-    "vue-property-decorator": "^8.4.2"
+    "vue-property-decorator": "^8.4.2",
+    "xss": "^1.0.7"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",

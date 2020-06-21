@@ -52,7 +52,7 @@ fe-app/
    ├──api/                       * 后端服务 API
    │
    ├──assets/                    * 需经 webpack 处理的静态资源
-   |
+   │
    ├──components/                * 所有组件
    │
    │──layouts/                   * Nuxt 布局容器组件

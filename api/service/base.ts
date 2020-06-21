@@ -1,4 +1,4 @@
-import { AxiosInstance } from 'axios'
+import { AxiosInstance } from '@/types'
 
 export default class BaseAPI {
   namspace: string

@@ -30,7 +30,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    './plugins/api.ts'
+    './plugins/api.ts',
+    './plugins/marked.ts',
+    './plugins/vue-extend.ts'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -72,7 +74,7 @@ export default {
     extend(config, ctx) {
     }
   },
-  // 全局使用scss变量，mixins
+  // 全局使用 scss 变量, mixins
   styleResources: {
     scss: [
       './styles/_variables.scss'

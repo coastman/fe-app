@@ -1,9 +1,9 @@
 <template>
   <header class="header">
     <div class="header-container">
-      <h2 class="title">
-        <!-- {{ title }} -->
-      </h2>
+      <h3 class="title">
+        {{ title }}
+      </h3>
     </div>
   </header>
 </template>
@@ -15,7 +15,7 @@ import { Component, Vue } from 'vue-property-decorator'
   name: 'Header'
 })
 export default class extends Vue {
-  private title: string = 'hello world'
+  private title: string = 'Header'
 }
 </script>
 
@@ -33,14 +33,10 @@ export default class extends Vue {
     width: 1050px;
     height: 100%;
     margin: 0 auto;
-    // background-color: burlywood;
     text-align: center;
 
     .title {
       font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      // display: block;
-      // font-weight: 300;
-      // font-size: 100px;
       color: #35495e;
       letter-spacing: 1px;
     }

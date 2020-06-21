@@ -1,9 +1,9 @@
 <template>
   <footer class="footer">
     <div class="footer-container">
-      <h2 class="title">
+      <h3 class="title">
         {{ title }}
-      </h2>
+      </h3>
     </div>
   </footer>
 </template>
@@ -15,7 +15,7 @@ import { Component, Vue } from 'vue-property-decorator'
   name: 'Footer'
 })
 export default class extends Vue {
-  private title: string = 'hello world'
+  private title: string = 'Footer'
 }
 </script>
 
@@ -23,7 +23,6 @@ export default class extends Vue {
 .footer {
   &-container {
     text-align: center;
-    color: cyan;
   }
 }
 </style>
